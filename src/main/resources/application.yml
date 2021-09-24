@@ -1,0 +1,21 @@
+server:
+  port: 8800
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study?autoReconnect=true&useSSL=false
+    username: newuser
+    password: 1234
+logging:
+  level:
+      org:
+        springframework:
+          web:
+            filter:
+              CommonsRequestLoggingFilter: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
